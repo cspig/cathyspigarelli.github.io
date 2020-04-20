@@ -1,67 +1,34 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: Cathy Spigarelli | EHS Professional | Writer | Mom.
+description: Hello, I'm Cathy. Welcome to the home of my thoughts on EHS, work, and happiness.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cathyspigarelli.com" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-# Site language
-lang: en-US
+# Author Settings
+author: Cathy Spigarelli # add your name
+author-img: about.jpg # add your photo
+about-author: I am an Environment, Health, and Safety manager with a passion for introspection and writing about it. # add description
+social-instagram: cathyspigarelli # add your Instagram handle
+social-facebook: cathy.spig # add your Facebook handle
+social-github:  # add your Github handle
+social-linkedin: cathy-spigarelli-21768610 # add your Linkedin handle
+social-email: cathy@cathyspigarelli.com # add your Email address
 
-# Site title
-title: "Cathy Spigarelli"
+# Disqus
+discus-identifier: cathyspigarelli # add your discus identifier
 
-# A description of your site for meta tag, search engine results.
-description: "Cathy Spigarelli | EHS Professional"
+# Tracker
+analytics: UA-163796508-1 # Google Analytics
 
-# The subpath of your site, e.g. /blog, for generating urls.
-baseurl: ""
-
-# The base hostname & protocol of your site for where absolute urls are needed.
-url: "https://cathyspigarelli.com"
-
-# Favicon
-favicon: images/favicon.png
-
-# Google Analytics id, e.g. "UA-NNNNNNNN-N"
-google_analytics: "UA-163796508-1"
-
-# Site navigation - each item must have a title and a url.
-navigation:
-  - text: Home
-    url: /
-  - text: About
-    url: /about/
-  - text: Tags
-    url: /tags/
-
-# The shortname for your Disqus site to enable comments.
-disqus: cathyspigarelli.disqus.com
-
-# Colors
-accent_color: '#7AA5D2'
-
-# Site footer
-footer:
-  content: "2020 &copy; Cathy Spigarelli. Powered by [Github Pages](https://pages.github.com) &amp; [Jekyll](https://jekyllrb.com)."
-  has_social: true
-
-# Plugins
-plugins:
-  - jekyll-paginate
-
-# http://jekyllrb.com/docs/pagination/
-paginate: 3
-paginate_path: '/page:num/'
-
-
-# Permalinks
-permalink: /:title
-
-# Conversion
+# Build Settings
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
