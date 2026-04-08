@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: cathyspigarelli/cathyspigarelli.github.io
+  repo: cspig/cathyspigarelli.github.io
   branch: master
-  # Netlify acts as the OAuth proxy (free). See setup instructions in README.
-  base_url: https://api.netlify.com
-  site_domain: merry-sopapillas-0af08a.netlify.app
+  base_url: https://decap-proxy.cathspig.workers.dev
+  auth_endpoint: /auth
 
 media_folder: static/img
 public_folder: /img
