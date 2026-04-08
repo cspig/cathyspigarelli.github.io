@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "In an Instant...Life Changed"
+title: In an Instant...Life Changed
 date: 2023-12-13
-author: "Cathy Spigarelli"
-image: "img/home-page.jpg"
+author: Cathy Spigarelli
+image: ""
+description: I thought I had a sinus infection. I thought I would be walking out
+  of the appointment with prescription in hand. I thought way wrong.
 tags: []
-description: "I thought I had a sinus infection. I thought I would be walking out of the appointment with prescription in hand. I thought way wrong."
 ---
 
 I thought I had a sinus infection. I thought I would be walking out of the appointment with prescription in hand. I thought way wrong.
