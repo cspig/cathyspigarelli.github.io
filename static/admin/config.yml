@@ -4,6 +4,7 @@ backend:
   branch: master
   # Netlify acts as the OAuth proxy (free). See setup instructions in README.
   base_url: https://api.netlify.com
+  site_domain: merry-sopapillas-0af08a.netlify.app
 
 media_folder: static/img
 public_folder: /img
