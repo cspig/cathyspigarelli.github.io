@@ -26,15 +26,20 @@ Push to `master` → GitHub Actions (`.github/workflows/hugo.yml`) builds with H
 
 ## CMS authentication
 
-Decap CMS uses the **GitHub backend** with **Netlify as a free OAuth proxy** — no Netlify hosting required.
+Decap CMS uses the **GitHub backend** with a **Cloudflare Worker as the OAuth proxy**, deployed from [sterlingwes/decap-proxy](https://github.com/sterlingwes/decap-proxy).
 
-- `base_url: https://api.netlify.com`
-- `site_domain: merry-sopapillas-0af08a.netlify.app` (blank placeholder Netlify site used solely as OAuth proxy)
+- `base_url: https://decap-proxy.cathspig.workers.dev`
+- `auth_endpoint: /auth`
 
-**GitHub OAuth App** is registered under Cathy's GitHub account with:
-- Callback URL: `https://api.netlify.com/auth/done`
+**Cloudflare account:** `cathspig` — the Worker is named `decap-proxy`, deployed to `decap-proxy.cathspig.workers.dev`.
 
-**Netlify site** (`merry-sopapillas-0af08a.netlify.app`) has the GitHub OAuth provider configured with the Client ID + Secret from the OAuth App above.
+**GitHub OAuth App** is registered under Cathy's GitHub account (`cspig`) with:
+- Homepage URL: `https://decap-proxy.cathspig.workers.dev`
+- Callback URL: `https://decap-proxy.cathspig.workers.dev/callback`
+
+**Worker secrets** (set via `npx wrangler secret put`):
+- `GITHUB_OAUTH_ID` — Client ID from the OAuth App
+- `GITHUB_OAUTH_SECRET` — Client Secret from the OAuth App
 
 Cathy logs into the CMS with her GitHub account.
 
