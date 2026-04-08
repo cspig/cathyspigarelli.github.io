@@ -28,6 +28,8 @@ Push to `master` → GitHub Actions (`.github/workflows/hugo.yml`) builds with H
 
 Decap CMS uses the **GitHub backend** with a **Cloudflare Worker as the OAuth proxy**, deployed from [sterlingwes/decap-proxy](https://github.com/sterlingwes/decap-proxy).
 
+To manage the cloudflare worker go to dash.cloudflare.com
+
 - `base_url: https://decap-proxy.cathspig.workers.dev`
 - `auth_endpoint: /auth`
 
