@@ -1,0 +1,61 @@
+baseurl = "https://cathyspigarelli.com"
+title = "Cathy Spigarelli"
+theme = "hugo-theme-cleanwhite"
+languageCode = "en-us"
+preserveTaxonomyNames = true
+
+[services]
+  [services.disqus]
+    shortname = ""
+
+[pagination]
+  pagerSize = 8
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[params]
+  header_image = "img/home-page.jpg"
+  SEOTitle = "Cathy Spigarelli | EHS Professional | Writer | Mom"
+  description = "Hello, I'm Cathy. Welcome to the home of my thoughts on EHS, work, and happiness."
+  keyword = "Cathy Spigarelli, EHS, Environmental Health Safety, writing, blog"
+  slogan = "EHS Professional | Writer | Mom"
+
+  image_404 = "img/home-page.jpg"
+  title_404 = "Page Not Found"
+
+  omit_categories = false
+  featured_tags = true
+  featured_condition_size = 1
+
+  sidebar_about_description = "I am an Environment, Health, and Safety manager with a passion for introspection and writing about it."
+  sidebar_avatar = "img/about.jpg"
+
+  friends = false
+  bookmarks = false
+  about_me = true
+  last_posts = true
+
+  page_view_counter = false
+  algolia_search = false
+
+  [params.social]
+  rss       = true
+  email     = "cathy@cathyspigarelli.com"
+  linkedin  = "https://www.linkedin.com/in/cathy-spigarelli-21768610"
+  instagram = "https://www.instagram.com/cathyspigarelli"
+  facebook  = "https://www.facebook.com/cathy.spig"
+
+  [[params.additional_menus]]
+  title = "ARCHIVE"
+  href  = "/archive/"
+  [[params.additional_menus]]
+  title = "ABOUT"
+  href  = "/about/"
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

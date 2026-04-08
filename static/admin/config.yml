@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: cathyspigarelli/cathyspigarelli.github.io
+  branch: master
+  # Netlify acts as the OAuth proxy (free). See setup instructions in README.
+  base_url: https://api.netlify.com
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: post
+    label: Blog Posts
+    folder: content/post
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Publish Date, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Author, name: author, widget: hidden, default: "Cathy Spigarelli" }
+      - { label: Header Image, name: image, widget: image, required: false, media_folder: /static/img, public_folder: /img }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: pages
+    label: Pages
+    files:
+      - label: About
+        name: about
+        file: content/about/index.md
+        fields:
+          - { label: Layout, name: layout, widget: hidden, default: page }
+          - { label: Body, name: body, widget: markdown }
