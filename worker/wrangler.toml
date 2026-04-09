@@ -1,0 +1,6 @@
+compatibility_date = "2025-11-17"
+main = "src/index.ts"
+name = "decap-proxy"
+
+[vars]
+GITHUB_REPO_PRIVATE = "0"
