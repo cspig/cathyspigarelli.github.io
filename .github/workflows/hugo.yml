@@ -47,6 +47,10 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Build search index (Pagefind)
+        # Theme references /_pagefind/, so pin the output dir to match (Pagefind 1.0+ defaults to /pagefind/).
+        run: npx -y pagefind@1 --site public --output-subdir _pagefind
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
