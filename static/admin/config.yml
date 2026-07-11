@@ -27,6 +27,31 @@ collections:
 
   - name: pages
     label: Pages
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: page }
+      - { label: Title, name: title, widget: string, required: false }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Header Image, name: image, widget: image, required: false, media_folder: /static/img, public_folder: /img }
+      - { label: Description, name: description, widget: string, required: false }
+      - label: "Show in navigation bar"
+        name: show_in_nav
+        widget: boolean
+        default: false
+        hint: "Turn on to add a link to this page in the top navigation bar."
+      - label: "Navbar order"
+        name: weight
+        widget: number
+        default: 10
+        value_type: int
+        required: false
+        hint: "Lower numbers appear first (leftmost) in the navigation bar. Only matters when 'Show in navigation bar' is on."
+      - { label: Body, name: body, widget: markdown }
+
+  - name: about
+    label: About Page
     files:
       - label: About
         name: about
